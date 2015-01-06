@@ -25,7 +25,11 @@
 
 
   $(function () {
-    
+    $(".current-room").html("You are currently in " + chat.room + '.');
+    chat.socket.on('roomList', function (){
+      $(".current-room").html("You are currently in " + chat.room);
+    })
+
     $(".send-message").on("submit", function (e) {
       e.preventDefault();
       message = ChatUI.getMessage($(e.currentTarget));
