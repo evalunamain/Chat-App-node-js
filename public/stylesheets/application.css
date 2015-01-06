@@ -1,0 +1,11 @@
+ul {
+  list-style: none
+}
+
+li.error {
+  color: red;
+}
+
+li.success{
+  color: #33CC00;
+}
